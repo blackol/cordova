@@ -133,8 +133,9 @@ h1 {
 #barreinfo {
   display: flex;
   flex-direction: row;
-  justify-self: space-between;
+  justify-self: space-around;
   flex: 1;
+  align-items: center;
   background-color: violet;
 }
 
@@ -169,7 +170,7 @@ h1 {
 
 .button {
   border-radius: 5px;
-  
+  font-size: 20px;
   background-color: blue;
   color:#ffffff;
 }
