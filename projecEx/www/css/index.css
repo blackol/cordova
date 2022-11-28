@@ -124,7 +124,6 @@ h1 {
   }
 }
 #deviceready {
-  background-color: #4b946a;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -136,48 +135,55 @@ h1 {
   justify-self: space-around;
   flex: 1;
   align-items: center;
-  background-color: violet;
 }
 
 #formulairediv {
   display: flex;
   flex: 5;
-  background-color: yellow;
-}
-
-.epilage {
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 
-.input {
-  width: 40%;
-  height: 35%;
-  display: flex;
-}
+
 #picturezone {
   display: flex;
   flex: 1;
-  background-color: #563434;
+  justify-content: space-around;
+  
 }
 #positionzone {
   display: flex;
   flex: 1;
-  background-color: tomato;
+  justify-content: center;
 }
 
 .button {
-  border-radius: 5px;
+  align-items: center;
   font-size: 20px;
   background-color: blue;
   color:#ffffff;
+  border-radius: 5px;
+  padding: 5px;
+
+}
+.continerbtnconexion{
+  display: flex;
+  justify-content: center;
 }
 .containerbtn{
   display:flex;
-  background-color: #4b946a;
   align-items: center;
   width: 50%;
   height: 50%;
+}
+.containerlogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containersgenralinput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

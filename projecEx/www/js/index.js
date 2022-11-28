@@ -27,6 +27,11 @@ function onDeviceReady() {
   console.log("Running cordova-" + cordova.platformId + "@" + cordova.version);
   document.getElementById("deviceready").classList.add("ready");
 
+  //------------------------------
+    // completer code pour info  device et info network
+
+  //---------------------
+
   document
     .getElementById("btTake")
     .addEventListener("click", prendrePhoto, false);
@@ -112,4 +117,23 @@ function position() {
   }
 
   navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
+}
+
+function connexion() {
+  const email = document.getElementById("mail");
+  const mdp = document.getElementById("mdp");
+
+
+ var xhr = new XMLHttpRequest();
+ xhr.open("POST", "erickstattner.com/service/user.php&email=" + email +"&mdp"+mdp, true);
+ xhr.send();
+
+ xhr.onreadystatechange = function () {
+   if (xhr.readyState == 4) {
+     if (xhr.status == 200 || xhr.status == 0) {
+       var reponse = JSON.parse(xhr.responseText);
+       console.log(reponse);
+     }
+   }
+ };
 }

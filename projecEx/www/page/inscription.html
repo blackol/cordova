@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Inscription</title>
+  <link rel="stylesheet" href="inscription.css">
+  <script src="inscription.js"></script>
+</head>
+<body>
+  <div id="deviceready">
+    <div id="conteneur-formulaire">
+        <div>
+                    
+            <form action="read" method="post">
+            <div>
+                <label for="name">nom</label>
+                <input type="text" id="name" name="user_name">
+            </div>
+            <div>
+                <label for="firstname">prenom</label>
+                <input type="text" id="firstname" name="user_firstname">
+            </div>
+            <div>
+                <label for="pseudo">pseudo</label>
+                <input type="text" id="pseudo" name="user_pseudo">
+            </div>
+            <div>
+                <label for="mail">e-mail&nbsp;:</label>
+                <input type="email" id="mail" name="user_mail">
+            </div>
+            <div>
+                <label for="mdps">mdps :</label>
+                <input type="password" id="mdps" name="user_mdps">
+            </div>
+            <div>
+                <label for="pays">pays</label>
+                <input type="text" id="pays" name="user_pays">
+            </div>
+            <!-- 
+                recuperer img dans tel 
+
+            -->
+
+            <div class="button">
+                <button type="submit">Envoyer le message</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+  </div>
+   <script src="../cordova.js"></script>
+</body>
+</html>

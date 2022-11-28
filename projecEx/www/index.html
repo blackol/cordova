@@ -40,80 +40,83 @@
     />
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="css/index.css" />
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Hello World</title>
   </head>
   <!--ICI On a la din du headers-->
   <body>
     <div id="deviceready">
       <!-- div principalle -->
-
-
-
-      <div id="barreinfo">
-        <div class="containerbtn">
-          <button class="button">info defice </button>
+      <div id="affichagevueconnexion" style="display: inline">
+          <div id="barreinfo">
+          <div class="containerbtn">
+            <button class="button">info defice</button>
+          </div>
+          <div class="containerbtn">
+            <button class="button">info on netwwork</button>
+          </div>
         </div>
-        <div class="containerbtn">
-          <button class="button">info on netwwork </button>
-        </div>
-      </div>
 
-
-
-
-      <!-- formulaire-->
-      <form id="formulairediv"></form>
-      <!--photo-->
-      <div id="picturezone"></div>
-      <!--gps-->
-      <div id="positionzone"></div>
-    </div>
-<!--
-      <div id="principale">
-        <!-- div contenant info device en haut de l'ecran
-        <div id="barreinfo">
-          <button>info on device (pas co)</button>
-        </div>
-        <!-- div contennant le formulaire -
-
-        <div id="formulairediv">
-          <div class="epilage">
-            <input class="input" type="email" placeholder="mail de connexion" />
-
-            <input class="input" type="password" placeholder="mots de passe" />
+        <!-- formulaire--
+        <form id="formulairediv">
+          <div class="containerlogo">
+            <img alt="imgelogo" src="./img/imgwb.jpeg" width="200px" />
           </div>
 
-          <button>connexion</button>
+          <div class="containersgenralinput">
+            <div>
+              <p>Identifiant</p>
+              <input type="email" id="email" name="name" size="25" />
+            </div>
+
+            <div>
+              <p>Mot de passe</p>
+              <input type="password" id="mdp" name="name" size="25" />
+            </div>
+          </div>
+          <div class="continerbtnconexion">
+            <buttton id="conexionbtn" class="button"> connexion </buttton>
+          </div>
+        </form>
+      -->
+
+      <form action="read" method="post">
+        <div class="containerlogo">
+            <img id="monImage" alt="imgelogo" src="./img/imgwb.jpeg" width="200px" />
+        </div>
+        <div>
+            <label for="mail">e-mail&nbsp;:</label>
+            <input type="email" id="mail" name="user_mail">
+        </div>
+        <div>
+            <label for="name">mdps :</label>
+            <input type="password" id="mdps" name="user_mdps">
         </div>
 
-        <!-- div contenant les fonctions de photo--
+        <div class="button">
+          <button type="submit" onclick="connexion()">Connexion</button>
+        </div>
+      </form>
+
+        <!--photo-->
         <div id="picturezone">
-          <button class="btn btn-sucess" style="font-size: 24px" ; id="btTake">
-            takepicture
-            <i class="fa fa-camera"></i>
-          </button>
-
-          <button class="btn btn-sucess" style="font-size: 24px" ; id="btLoad">
-            loadpiture
-            <i class="fa fa-cloud-download"></i>
-          </button>
+          <button class="button" id="btTake">take a picture</button>
+          <button class="button" id="btLoad">load picture</button>
         </div>
-        <!--div contenat les fonction de position--
+        <!--gps-->
         <div id="positionzone">
-          <button id="getPosition">Position Current</button>
+          <button class="button" id="getPosition">test gps</button>
         </div>
       </div>
-    </div>
+      </div>
+<!--
+      <div id="afficherlogconnexion" style="display:none">
+
+      </div>
+    -->
 
     
-    <div class="app">
-      <h1>Apache Cordova</h1>
-      <div id="deviceready" class="blink">
-        <p class="event listening">Connecting to Device</p>
-        <p class="event received">Device is Ready</p>
-      </div>
-    </div>
-  -->
     <script src="cordova.js"></script>
     <script src="js/index.js"></script>
   </body>
